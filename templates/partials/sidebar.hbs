@@ -1,0 +1,37 @@
+<!-- Sidebar -->
+    <nav id="sidebar" class="active">
+        <div class="sidebar-header">
+            <h3>Recipe App</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li class="{{#if active_home}}active{{/if}}">
+                <a href="/">Home</a>
+            </li>
+            <li class="{{#if active_recipes}}active{{/if}}">
+                <a href="#recipesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Recipes</a>
+                <ul class="collapse list-unstyled" id="recipesSubmenu">
+                    <li class="{{#if active_add_recipes}}active{{/if}}">
+                        <a href="/add-recipe">Add New Recipe</a>
+                    </li>
+                    <li class="{{#if active_view_id_recipes}}active{{/if}}">
+                        <a href="#">View Recipe By ID</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="{{#if active_ingredients}}active{{/if}}">
+                <a href="#ingredientsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ingredients</a>
+                <ul class="collapse list-unstyled" id="ingredientsSubmenu">
+                    <li class="{{#if active_add_ingredients}}active{{/if}}">
+                        <a href="/add-ingredient">Add New Ingredient</a>
+                    </li>
+                    <li class="{{#if active_view_id_ingredients}}active{{/if}}">
+                        <a href="#">View Ingredient By ID</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="{{#if active_make_shopping_list}}active{{/if}}">
+                <a href="/make-shopping-list">Make Shopping List</a>
+            </li>
+        </ul>
+    </nav>

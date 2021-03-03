@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Recipe App Using Heroic Features</title>
+
+  {{>common_links}}
+  <link href="/css/bootstrap-select.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="wrapper">
+    
+  {{>sidebar}}
+
+  <!-- Page Content -->
+  <div class="container-fluid" id="content">
+
+    {{>sidebar_button}}
+
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="name">Recipe Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Vegetable Stir Fry">
+            </div>
+            <div class="form-group">
+                <label for="serves">Serves:</label>
+                <input type="number" class="form-control" id="serves" placeholder="2">
+            </div>
+            <div class="form-group">
+                <label for="instructions">Preparation Instructions:</label>
+                <textarea class="form-control" id="instructions" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="ingredients">Ingredients:</label>
+                <br />
+                {{>select_ingredients}}
+
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="form-label" for="picture">Recipe Picture (Optional)</label>
+                <input type="file" class="form-control-file" id="picture" accept="image/*"/>
+            </div>
+
+            <div id="form-response" class="alert" role="alert"></div>
+
+            <button type="submit" class="btn btn-primary center-button">Save</button>
+        </form>
+    <!-- /.container -->
+    </div>
+  <!-- /.container-fluid-->
+  </div>
+<!-- /.wrapper--> 
+</div>
+
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+  <script src="/js/add-recipe.js"></script>
+  <script src="/js/bootstrap-select.min.js"></script>
+
+</body>
+</html>

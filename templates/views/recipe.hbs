@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Recipe App Using Heroic Features</title>
+
+  {{>common_links}}
+</head>
+
+<body>
+<div class="wrapper">
+    
+  {{>sidebar}}
+
+  <!-- Page Content -->
+  <div class="container-fluid" id="content">
+
+    {{>sidebar_button}}
+
+    <div class="container">
+        <!-- Page Features -->
+        <h1>{{recipe.name}}</h1>
+
+        <img src="/recipe/{{recipe._id}}/picture" />
+
+        <p>Serves: {{recipe.serves}}</p>
+
+        <h2>Ingredients:</h2>
+        <ul>
+            {{#each recipe.ingredients}}
+            <li>{{name}}</li>
+            {{/each}}
+        </ul>
+
+        <h2>Instructions:</h2>
+        <p>{{recipe.instructions}}</p>
+    <!-- /.container -->
+    </div>
+  <!-- /.container-fluid-->
+  </div>
+<!-- /.wrapper--> 
+</div>
+
+  
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/sidebar.js"></script>
+
+</body>
+</html>
